@@ -1,0 +1,75 @@
+﻿@*@model getUserFromApi.Models.User*@
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4 border border-dark">
+        <form method="post" action="Create">
+            <div class="form-group">
+                <label for="UserID" class="control-label">UserID</label>
+                <input id="UserID" class="form-control" name="UserID" />
+                @*<span asp-validation-for="UserID" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label for="PWD" class="control-label">PWD</label>
+                <input id="PWD" type="password" class="form-control" name="PWD" />
+                @*<span asp-validation-for="PWD" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label for="FirstName" class="control-label">FirstName</label>
+                <input id="FirstName" class="form-control" name="FirstName" />
+                @*<span asp-validation-for="FirstName" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label for="FirstCName" class="control-label">FirstCName</label>
+                <input id="FirstCName" class="form-control" name="FirstCName" />
+                @* <span asp-validation-for="FirstCName" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label for="Gender" class="control-label">Gender</label>
+                <input id="Gender" class="form-control" name="Gender" />
+                @* <span asp-validation-for="Gender" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label for="LastName" class="control-label">LastName</label>
+                <input id="LastName" class="form-control" name="LastName" />
+                @*<span asp-validation-for="LastName" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label for="LastCName" class="control-label">LastCName</label>
+                <input id="LastCName" class="form-control" name="LastCName" />
+                @*<span asp-validation-for="LastCName" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label for="Mail" class="control-label">Mail</label>
+                <input id="Mail" type="email" class="form-control" name="Mail" />
+                @*<span asp-validation-for="Mail" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label for="Mobile" class="control-label">Mobile</label>
+                <input id="Mobile" class="form-control" name="Mobile" />
+                @* <span asp-validation-for="Mobile" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="新增" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@ViewBag.result
+<div>
+    <a href="Userlist">回到清單頁</a>
+</div>
+
+@section Scripts {
+    @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+    <script type="text/javascript">
+
+    </script>
+}
+
+

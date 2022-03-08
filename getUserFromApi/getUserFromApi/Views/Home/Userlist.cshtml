@@ -1,0 +1,112 @@
+﻿@*@model IEnumerable<getUserFromApi.Models.User>*@
+@{
+    ViewData["Title"] = "Userlist";
+    List<User> allusers = Model;
+}
+
+<h1>Userlist</h1>
+
+<p>
+    <a href="Create">新增會員</a> @ViewBag.result
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @*@Html.DisplayNameFor(model => model.UserID)*@
+                UserID<br>(用戶ID)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.PWD)*@
+                PWD<br />(用戶密碼)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.FirstName)*@
+                FirstName<br />(姓氏英文)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.FirstCName)*@
+                FirstCName<br />(姓氏中文)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Gender)*@
+                Gender<br />(性別)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.LastName)*@
+                LastName<br />(英文名字)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.LastCName)*@
+                LastCName<br />(中文名字)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Mail)*@
+                Mail<br />(電子郵件)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Mobile)*@
+                Mobile<br />(手機)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (allusers != null)
+        {
+            @foreach (var item in allusers)
+            {
+                <tr>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.UserID)*@
+                        @item.UserID
+                    </td>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.PWD)*@
+                        @item.PWD
+                    </td>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.FirstName)*@
+                        @item.FirstName
+                    </td>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.FirstCName)*@
+                        @item.FirstCName
+                    </td>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.Gender)*@
+                        @item.Gender
+                    </td>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.LastName)*@
+                        @item.LastName
+                    </td>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.LastCName)*@
+                        @item.LastCName
+                    </td>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.Mail)*@
+                        @item.Mail
+                    </td>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.Mobile)*@
+                        @item.Mobile
+                    </td>
+                    <td>
+                        @Html.ActionLink("編輯", "Edituser", new { userID = item.UserID }) |
+                        @Html.ActionLink("刪除", "Deleteuser", new { userID = item.UserID })
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="9">無資料</td></tr>
+        }
+    </tbody>
+</table>
+
+@TempData["result"]
+
+

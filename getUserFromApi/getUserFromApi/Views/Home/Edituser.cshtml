@@ -1,0 +1,73 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Edituser";
+    User user = Model;
+}
+
+<h1>編輯使用者資料</h1>
+@if (user != null)
+{
+    <h4>@user.UserID</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4 border border-dark">
+            <form method="post" action="Edituser">
+                <div class="form-group">
+                    <label for="UserID" class="control-label">UserID</label>
+                    <input id="UserID" class="form-control" name="UserID" value="@user.UserID" />
+
+                </div>
+                <div class="form-group">
+                    <label for="PWD" class="control-label">PWD</label>
+                    <input id="PWD" type="password" class="form-control" name="PWD" value="@user.PWD" />
+
+                </div>
+                <div class="form-group">
+                    <label for="FirstName" class="control-label">FirstName</label>
+                    <input id="FirstName" class="form-control" name="FirstName" value="@user.FirstName" />
+
+                </div>
+                <div class="form-group">
+                    <label for="FirstCName" class="control-label">FirstCName</label>
+                    <input id="FirstCName" class="form-control" name="FirstCName" value="@user.FirstCName" />
+
+                </div>
+                <div class="form-group">
+                    <label for="Gender" class="control-label">Gender</label>
+                    <input id="Gender" class="form-control" name="Gender" value="@user.Gender" />
+
+                </div>
+                <div class="form-group">
+                    <label for="LastName" class="control-label">LastName</label>
+                    <input id="LastName" class="form-control" name="LastName" value="@user.LastName" />
+
+                </div>
+                <div class="form-group">
+                    <label for="LastCName" class="control-label">LastCName</label>
+                    <input id="LastCName" class="form-control" name="LastCName" value="@user.LastCName" />
+
+                </div>
+                <div class="form-group">
+                    <label for="Mail" class="control-label">Mail</label>
+                    <input id="Mail" type="email" class="form-control" name="Mail" value="@user.Mail" />
+
+                </div>
+                <div class="form-group">
+                    <label for="Mobile" class="control-label">Mobile</label>
+                    <input id="Mobile" class="form-control" name="Mobile" value="@user.Mobile" />
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="編輯" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+}
+else
+{ <h5 class="text-danger">無使用者資料</h5>}
+<div>
+    <a href="Userlist">回到清單頁</a>
+</div>
+@TempData["result"]
+@ViewBag.result

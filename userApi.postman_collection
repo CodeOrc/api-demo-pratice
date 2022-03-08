@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "cd334098-47c5-40d9-8d4d-71b3830934a8",
+		"name": "userApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllUsersFromTxt",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44334/GetAllUsersFromTxt",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44334",
+					"path": [
+						"GetAllUsersFromTxt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserByIdFromTxt",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44334/GetUserByIdFromTxt?userID=Tom1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44334",
+					"path": [
+						"GetUserByIdFromTxt"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "Tom1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUserInTxt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userID\": \"test1\",\r\n  \"pwd\": \"testPSW\",\r\n  \"firstName\": \"test\",\r\n  \"firstCName\": \"test\",\r\n  \"gender\": \"男\",\r\n  \"lastName\": \"string\",\r\n  \"lastCName\": \"string\",\r\n  \"mail\": \"test@com\",\r\n  \"mobile\": \"XXX-test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44334/CreateUserInTxt",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44334",
+					"path": [
+						"CreateUserInTxt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUserInTxt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userID\": \"test1\",\r\n  \"pwd\": \"123\",\r\n  \"firstName\": \"string\",\r\n  \"firstCName\": \"string\",\r\n  \"gender\": \"女\",\r\n  \"lastName\": \"test\",\r\n  \"lastCName\": \"test\",\r\n  \"mail\": \"test123@com\",\r\n  \"mobile\": \"text-XXX\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44334/UpdateUserInTxt",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44334",
+					"path": [
+						"UpdateUserInTxt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUserInTxt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44334/DeleteUserInTxt?userID=test1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44334",
+					"path": [
+						"DeleteUserInTxt"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "test1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
